@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course with Emergency Exit</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .emergency-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .emergency-button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Emergency Exit Button -->
+        <button class="emergency-button" onclick="emergencyExit()">Exit Now</button>
+
+        <!-- Course Content (Embed Your Rise Course Here) -->
+        <iframe src="https://your-rise-course-url.com"></iframe>
+    </div>
+
+    <script>
+        function emergencyExit() {
+            window.location.href = "https://www.google.com"; // Redirects the user to a safe page
+        }
+    </script>
+</body>
+</html>
